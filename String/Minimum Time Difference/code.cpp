@@ -84,7 +84,7 @@ public class Solution {
         }
         Collections.sort(times);
         Time earlist = times.get(0);
-        times.add(new Time(earlist.h + 24, earlist.m));
+        times.add(new Time(earlist.h + 24, earlist.m));//将最小的时间加到末尾
         int minDiff = Integer.MAX_VALUE;
         for (int i = 0; i < n; i++) {
             int diff = (int) Math.abs(times.get(i).getDiff(times.get(i + 1)));
